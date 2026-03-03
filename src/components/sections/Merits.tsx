@@ -14,7 +14,7 @@ const merits = [
 export const Merits = () => {
     return (
         <section
-            className="relative py-14 md:py-24 overflow-hidden bg-white"
+            className="relative py-10 md:py-16 overflow-hidden bg-white"
             style={{
                 backgroundImage: "url('/assets/textures/texture_bg.jpg')",
                 backgroundSize: "cover",
@@ -26,12 +26,12 @@ export const Merits = () => {
 
             <div className="relative container mx-auto px-6">
                 {/* Section Header */}
-                <div className="text-center mb-12 md:mb-20">
+                <div className="text-center mb-8 md:mb-10">
                     <div className="w-12 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-4" />
                     <p className="text-[10px] md:text-xs tracking-[0.4em] text-gold/80 uppercase mb-4">
                         The 6 Advantages
                     </p>
-                    <h2 className="text-[28px] md:text-5xl font-serif text-gray-800 leading-[1.6] tracking-widest font-bold">
+                    <h2 className="text-[28px] md:text-4xl lg:text-5xl font-sans text-gray-800 leading-[1.4] tracking-wide font-bold">
                         ジルコニアベニアの
                         <br />
                         メリット
