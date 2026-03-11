@@ -10,6 +10,14 @@ import { QA } from "@/components/sections/QA";
 import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
 
+const SECTION_IDS = ["helo", "brand-message", "merits", "instagram", "qa", "clinic-gallery", "access"];
+
+export async function generateStaticParams() {
+    return SECTION_IDS.map((section) => ({
+        section: section,
+    }));
+}
+
 export default async function SectionPreviewPage({ params }: { params: { section: string } }) {
     const { section } = await params;
 
