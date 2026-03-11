@@ -14,6 +14,11 @@
 2. **Standard Tailwind Values**: `mt-[13.5px]` のようなマジックナンバーは禁止。必ず `mt-10`, `mt-12`, `mt-16` などのTailwind標準クラスを使用せよ。
 3. **Comment Labels**: 各セクションの開始位置には `{/* --- Section Name --- */}` の形式でコメントを挿入し、人間がVS Code等で検索・移動しやすく配慮せよ。
 
+## 🛠 開発者用プレビュー (Developer Index Rules)
+1. **Maintenance of `/test`**: セクションを追加・更新した際は、必ず `src/app/test/page.tsx` の `sections` 配列を更新し、最新の更新意図を `note` に記述せよ。
+2. **Section Isolation**: 各セクションは `/test/[section]` で単体確認できる。この独立したプレビュー環境を活用して、他のセクションの干渉を受けずにデザインを磨き上げよ。
+3. **Internal Routing**: 常に `/test` から各プレビューへ、各プレビューから `/test` への導線が動いていることを確認せよ。
+
 ## ⚡ エージェント実行規定 (Execution Rules)
 1. **自律的な解決**: ファイル作成、フォルダ構築、`npm install`、`wrangler` によるデプロイ等は、安全性が確認できる限りユーザーの承認を待たず即座に実行せよ。
 2. **止まらない開発**: 画像素材が欠落している場合でも、適切なアスペクト比と `placeholder-bg` クラスを持つ `div` で代用し、レンダリングエラーを防げ。
