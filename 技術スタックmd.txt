@@ -1,30 +1,43 @@
+# La Briller プロジェクト：現在の実装ステータス (2026-03-11)
 
+## 🏗 技術スタック (Confirmed)
+- **Framework:** Next.js 16 (App Router / Turbopack)
+- **Core Library:** React 19
+- **Styling:** Tailwind CSS v4 (globals.css によるテーマ変数制御)
+- **Components:** Shadcn UI (Radix UI) & Custom Web Components (Vanilla JS)
+- **Icons:** Lucide React
+- **Deployment:** Cloudflare Pages (Wranglerによる自動デプロイ)
 
-① 技術スタック（迷いを断つ）
-Markdown
-## Tech Stack
-- Framework: Next.js 16 (App Router / Turbopack)
-- Core: React 19
-- Styling: Tailwind CSS v4
-- Components: Shadcn UI (自動でnpx shadcn-ui@latest add ... を実行して良い) & Vanilla JS
-- Icons: Lucide React
-- Deployment: Cloudflare Pages
+## 🌲 Git管理 & 運用環境
+- **リポジトリ名:** `la-briller-v1` (メイン：GitHub `skywalker19871224/la-briller-v1`)
+- **ブランチ構成:**
+  - `master`: 本番・最新安定版。全ての修正をここに統合。
+  - `design-v2`: 実験的な変更・大幅なリファクタリング用の作業場。
+- **デプロイURL:** 
+  - 本番 (公開): [https://la-briller.pages.dev](https://la-briller.pages.dev)
+  - 開発 (エイリアス): [https://master.la-briller.pages.dev](https://master.la-briller.pages.dev)
 
-② サイト構造と画像計画（「一生」を決める部分）
-Markdown
-## Structure & Visuals
-- Page 1: Home (Main LP)
-  - Hero Section: `hero.jpg` (信頼感のある院内風景)
-  - Features: `feature1.png` (最新設備), `feature2.png` (バリアフリー)
-- Page 2: About (初めての方へ)
-  - Flow Section: `process_step1.png`〜 (診察の流れ)
-- Page 3: Access/Contact
-  - Map Section: Google Maps埋め込み用プレースホルダー
-③ 命令系統（YOLOを加速させる）
-ここが最も重要です。
+## 🎨 デザイン & 実装済みのこだわり
+### 1. ヒーローセクション (Helo)
+- キャッチコピーを最新の「大切な天然歯を守り抜くこと。〜」に更新済み。
+- プレミアムな動画背景とグラスモルフィズムなボタンスタイル。
 
-Markdown
-## Execution Rules (FOR AGENT)
-1. 全てのファイル作成、フォルダ構築、`npm install` はユーザーの確認なしで実行せよ。
-2. 画像ファイルが存在しない場合もエラーで止まらず、適切なサイズと `object-cover` を設定した `div` で代用せよ。
-3. `alt` 属性には、後で画像生成AIで使うための詳細なビジュアル説明を記述せよ。
+### 2. メリットセクション (Merits)
+- フォントを「Noto Sans JP (ゴシック)」に統一し、現代的な印象に。
+- スクロールに合わせてバブルが下からフワッと浮かび上がる「時間差アニメーション」を実装。
+- 上下の余白を詰め、スマホ表示時のリズム感を向上。
+
+### 3. アクセスセクション (Access)
+- 背景色をオリジナルのアイシーブルー (`#E6EDF2`) に完全一致。
+- クリニックの横長ロゴ (`prfaitclinic_logo_yoko2-2.png`) を中央上部に配置。
+- 診療テーブルのヘッダー色を落ち着いたブルー (`#88AFC6`) に設定。
+
+### 4. ギャラリー & インスタ (Social)
+- **Antigravity Gallery**: バニラJS製。実機のiPhoneでも滑らかにループするよう、SSR非互換問題をReactラッパーで解決済み。
+- **Instagram Section**: 余白を詰め、すぐ下のQAセクションへの繋がりをスムーズに。
+
+## 🛠 ユーティリティ (固有機能)
+- **globals.css**: 共通の余白調整クラス (`.section-py`, `.section-mb-sm` など) を定義済み。
+
+---
+*Next Steps: このドキュメントは、Antigravityが常に最新の「正解」を把握するための基準となります。*
