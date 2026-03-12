@@ -28,7 +28,7 @@
 このページはパルフェクリニックの一部であるため、**本家サイトの「ヘッダー」および「フッター」を完全に再現**し、ユーザーが「パルフェクリニックのサイト内にいる」という安心感を保てるようにします。
 
 ### 詳細カラーチャート (Official Theme)
-- **Primary Blue (Logo/Nav):** `#8CC3D1` (パルフェブルー。清潔感と信頼)
+- **Primary Blue (Logo/Nav):** `#7aaec8` (パルフェブルー。清潔感と信頼)
 - **Light Background Blue:** `#E6F2F5` (セクション背景などで多用される淡い青)
 - **Table Header Blue:** `#7EADC4` (診療時間表などのヘッダー色)
 - **CTA Colors (Bottom Bar):**
@@ -61,7 +61,7 @@
   - 本文: ゴシック体（Noto Sans JP） - ラブリエの精密さとテクノロジー。
 - **Colors:**
   - `Parfait White` (#FCFCFC)
-  - `Parfait Blue` (#8CC3D1)
+  - `Parfait Blue` (#7aaec8)
   - `La Briller Blue` (#005BAC)
   - `Champagne Gold` (#D4AF37)
 - **Accents:** 大胆な余白（サヴィル・ロウの仕立て）、セクションを区切るゴールドの細線。

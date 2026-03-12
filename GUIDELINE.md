@@ -11,8 +11,8 @@
 既存の `tailwind.config.ts` に定義されたブランドカラーを必ず使用してください。
 
 ### カラーパレット
-- **メイン**: `bg-parfait-blue` (#87CEEB) - ブランドリボン、アクセント用
-- **背景**: `bg-parfait-white` (#FDFDFD) - ページ全体の基本背景
+- **メイン**: `bg-parfait-blue` (#7aaec8) - ブランドリボン、アクセント用
+- **背景**: `bg-parfait-white` (#FCFCFC) - ページ全体の基本背景
 - **テキスト**: 主に `text-gray-800` (本文), `text-gray-900` (見出し)
 - **アクセント**: `text-gold` (#D4AF37) - プレミアム感の演出用
 
