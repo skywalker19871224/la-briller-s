@@ -44,6 +44,21 @@ export const WhatIsLabriller = () => {
         >
             {/* BrandMessageと同じ背景のアニメーションライン */}
             <div className="absolute inset-0 pointer-events-none">
+                {/* Diamond Background Decoration */}
+                <div 
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] md:w-[60%] opacity-[0.07] mix-blend-screen"
+                    style={{
+                        transform: `translate(-50%, calc(-50% + ${progress * 100}px)) rotate(${progress * 10}deg)`,
+                        willChange: 'transform',
+                    }}
+                >
+                    <img 
+                        src="/assets/decorations/diamond.webp" 
+                        alt="" 
+                        className="w-full h-auto"
+                    />
+                </div>
+
                 {LINES.map((line, i) => (
                     <div
                         key={i}

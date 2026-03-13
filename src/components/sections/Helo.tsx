@@ -13,7 +13,7 @@ export const Helo = () => {
                     playsInline
                     className="w-full h-full object-cover scale-[1.02]" // わずかに拡大して端の切れを防ぐ
                 >
-                    <source src="https://nanoism.co.jp//files/libs/2687/202410031717096967.mp4" type="video/mp4" />
+                    <source src="/assets/videos/hero-cm.mp4" type="video/mp4" />
                 </video>
                 {/* Gradient for Text Readability */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-transparent z-10" />
