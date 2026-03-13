@@ -64,21 +64,27 @@ export const WhatIsLabriller = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
-                <SectionHeader
-                    en="What is La Briller"
-                    ja="ラブリエとは"
-                    theme="dark"
-                    className="mb-10 md:mb-14"
-                />
-
-                {/* Main Copies */}
-                <div className="mb-10 space-y-6 flex flex-col items-center">
-                    <p className={`font-serif tracking-wider leading-[1.6] ${fontSizeTop}`}>
-                        貼るだけで<br className="md:hidden" />
-                        理想の口元を叶える
-                    </p>
+                {/* Tight Stack Header */}
+                <div className="flex flex-col items-center mb-8">
+                    <span className="text-[10px] md:text-xs tracking-[0.6em] text-white/70 uppercase mb-2">
+                        WHAT IS LA BRILLER
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-light tracking-[0.2em] text-white mb-6">
+                        ラブリエとは
+                    </h2>
                     
-                    {/* 案3-C: Inverted Notch Ribbon */}
+                    <div className="space-y-1 mb-8">
+                        <p className="text-xl md:text-2xl font-serif italic tracking-widest text-white/90">
+                            貼るだけで
+                        </p>
+                        <p className="text-2xl md:text-3xl font-serif tracking-[0.15em] leading-tight text-white font-medium">
+                            理想の口元を叶える
+                        </p>
+                    </div>
+                </div>
+
+                {/* Inverted Notch Ribbon */}
+                <div className="flex justify-center mb-10">
                     <div className="relative group">
                         <div 
                             className="bg-[#B91C1C] px-8 md:px-12 py-2 md:py-3 relative inline-block"
@@ -93,7 +99,7 @@ export const WhatIsLabriller = () => {
                     </div>
                 </div>
 
-                {/* Minimal Divider - Margin adjusted */}
+                {/* Minimal Divider */}
                 <div className="flex justify-center mb-10">
                     <div className="w-12 h-px bg-white/30 mx-auto" />
                 </div>
