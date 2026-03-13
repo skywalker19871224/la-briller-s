@@ -1,7 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Helo } from "@/components/sections/Helo";
 import { BrandMessage } from "@/components/sections/BrandMessage";
 import { Merits } from "@/components/sections/Merits";
@@ -58,7 +56,7 @@ export default async function SectionPreviewPage({ params }: { params: { section
     }
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-parfait-white">
             {/* Dev Navigation Overlay */}
             <div className="fixed top-4 left-4 z-[9999] flex items-center gap-2">
                 <Link
@@ -72,11 +70,9 @@ export default async function SectionPreviewPage({ params }: { params: { section
                 </span>
             </div>
 
-            <Header />
             <main>
                 <Component />
             </main>
-            <Footer />
         </div>
     );
 }
