@@ -51,12 +51,13 @@ export const Header = () => {
         {/* Main Header */}
         <div className="container mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-default relative z-50">
+          <div className="flex-shrink-0 cursor-default relative z-50 flex items-center gap-2">
             <img
               src="https://parfait-clinic.com/wp-content/uploads/2023/08/prfaitclinic_logo_yoko2-2.png"
               alt="表参道の歯医者｜パルフェクリニック・医科歯科"
               className="h-12 w-auto"
             />
+            <span className="text-[8px] font-mono text-gray-300 mt-2">v3.1</span>
           </div>
 
           {/* Global Navigation (Desktop) */}
