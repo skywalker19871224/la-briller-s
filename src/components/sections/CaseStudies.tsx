@@ -62,7 +62,7 @@ const CaseCard = ({ item }: { item: CaseItem }) => {
         <h3 className="text-base md:text-lg font-bold text-slate-800 mb-2 leading-snug">
           {item.title}
         </h3>
-        <p className="text-sm text-slate-400 leading-relaxed">
+        <p className="text-sm md:text-base font-bold text-gray-600 leading-relaxed">
           {item.description}
         </p>
       </div>

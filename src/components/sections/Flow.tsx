@@ -37,8 +37,8 @@ export const Flow = () => {
             <TitleBand en="Treatment Flow" ja="治療の流れ" />
 
             {/* Steps */}
-            <div className="py-12 md:py-16 container mx-auto px-6 max-w-2xl text-left">
-                <div className="space-y-2">
+            <div className="py-6 md:py-10 container mx-auto px-6 max-w-2xl text-left">
+                <div className="space-y-0">
                     {flowSteps.map((step, index) => (
                         <div key={step.number}>
                             <div
@@ -49,25 +49,25 @@ export const Flow = () => {
                                     transform: visibleItems[index] ? 'translateY(0)' : 'translateY(16px)'
                                 }}
                             >
-                                <div className="relative pt-4">
+                                <div className="relative -mt-4">
                                     {/* Elegant Tab - Step number centered */}
-                                    <div className="inline-flex items-center justify-center bg-parfait-blue text-white w-32 py-1.5 rounded-t-xl gap-1.5 ml-2 shadow-sm">
-                                        <span className="font-serif italic text-[10px] opacity-80 translate-y-[1px]">Step</span>
-                                        <span className="font-serif text-xl leading-none font-bold">{step.number}</span>
+                                    <div className="inline-flex items-center justify-center bg-parfait-blue text-white w-28 py-1 rounded-t-lg gap-1 ml-2 shadow-sm">
+                                        <span className="font-serif italic text-[9px] opacity-80 translate-y-[1px]">Step</span>
+                                        <span className="font-serif text-lg leading-none font-bold">{step.number}</span>
                                     </div>
                                     
                                     {/* Main Card - Solid Blue Frame */}
-                                    <div className="bg-white border border-parfait-blue rounded-2xl rounded-tl-none p-6 md:p-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
-                                        <div className="flex flex-wrap items-center gap-3 mb-2">
-                                            <h3 className="text-base md:text-xl font-bold text-labriller-blue leading-snug">
+                                    <div className="bg-white border border-parfait-blue rounded-xl rounded-tl-none p-4 md:p-6 shadow-[0_2px_12px_-8px_rgba(0,0,0,0.03)]">
+                                        <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                                            <h3 className="text-sm md:text-lg font-bold text-labriller-blue leading-snug">
                                                 {step.title}
                                             </h3>
                                             {/* 来院バッジ - タイトルの後に配置 */}
-                                            <span className="inline-block bg-parfait-blue/10 text-parfait-blue text-[10px] font-bold tracking-wider px-2 py-0.5 rounded border border-parfait-blue/20">
+                                            <span className="inline-block bg-parfait-blue/10 text-parfait-blue text-[9px] font-bold tracking-wider px-1.5 py-0.5 rounded border border-parfait-blue/20">
                                                 {step.visit}
                                             </span>
                                         </div>
-                                        <p className="text-sm md:text-base text-gray-500 leading-relaxed">
+                                        <p className="text-sm md:text-base font-bold text-gray-600 leading-relaxed">
                                             {step.description}
                                         </p>
                                     </div>
@@ -76,9 +76,9 @@ export const Flow = () => {
 
                             {/* ステップ間 区切り - 逆三角形 (間に差し込む) */}
                             {index < flowSteps.length - 1 && (
-                                <div className="flex justify-center py-2 relative z-10">
-                                    <svg width="32" height="10" viewBox="0 0 32 10" fill="none" className="drop-shadow-sm">
-                                        <path d="M0 0H32L16 10L0 0Z" fill="#7aaec8"/>
+                                <div className="flex justify-center py-0 relative z-10 translate-y-2">
+                                    <svg width="96" height="32" viewBox="0 0 24 8" fill="none" className="drop-shadow-sm">
+                                        <path d="M0 0H24L12 8L0 0Z" fill="#7aaec8"/>
                                     </svg>
                                 </div>
                             )}
