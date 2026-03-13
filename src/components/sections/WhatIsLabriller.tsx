@@ -17,7 +17,7 @@ export const WhatIsLabriller = () => {
     // ここを変更すると文字の大きさが変わります
     // Tailwindのクラス名（text-xl等）で指定してください
     const fontSizeTop = "text-2xl md:text-3xl lg:text-4xl"; // 「貼るだけで〜」のサイズ
-    const fontSizeBottom = "text-3xl md:text-5xl lg:text-6xl"; // 「世界最薄〜」のサイズ
+    const fontSizeBottom = "text-xl md:text-2xl lg:text-3xl"; // 「世界最薄〜」のサイズ
     const descriptionSize = "text-base md:text-lg"; // 説明文のサイズ
     // ---------------------------------------
 
@@ -66,7 +66,7 @@ export const WhatIsLabriller = () => {
                 {/* Main Copies */}
                 <div className="mb-12 space-y-4">
                     <p className={`font-serif tracking-wider leading-[1.8] ${fontSizeTop}`}>
-                        貼るだけで理想の口元を叶える
+                        貼るだけで<br />理想の口元を叶える
                     </p>
                     <h2 className={`font-serif font-bold tracking-tight text-white ${fontSizeBottom}`}>
                         世界最薄ジルコニアベニア
