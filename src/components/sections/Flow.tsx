@@ -38,15 +38,15 @@ export const Flow = () => {
 
             {/* Steps */}
             <div className="py-12 md:py-16 container mx-auto px-6 max-w-2xl text-left">
-                <div className="space-y-12">
+                <div className="space-y-2">
                     {flowSteps.map((step, index) => (
-                        <div key={step.number} className="relative">
+                        <div key={step.number}>
                             <div
                                 ref={el => { itemRefs.current[index] = el; }}
                                 className="transition-all duration-700 ease-out"
                                 style={{
                                     opacity: visibleItems[index] ? 1 : 0,
-                                    transform: visibleItems[index] ? 'translateY(0)' : 'translateY(24px)'
+                                    transform: visibleItems[index] ? 'translateY(0)' : 'translateY(16px)'
                                 }}
                             >
                                 <div className="relative pt-4">
@@ -57,8 +57,8 @@ export const Flow = () => {
                                     </div>
                                     
                                     {/* Main Card - Solid Blue Frame */}
-                                    <div className="bg-white border border-parfait-blue rounded-2xl rounded-tl-none p-6 md:p-8 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)]">
-                                        <div className="flex flex-wrap items-center gap-3 mb-3">
+                                    <div className="bg-white border border-parfait-blue rounded-2xl rounded-tl-none p-6 md:p-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
+                                        <div className="flex flex-wrap items-center gap-3 mb-2">
                                             <h3 className="text-base md:text-xl font-bold text-labriller-blue leading-snug">
                                                 {step.title}
                                             </h3>
@@ -74,11 +74,11 @@ export const Flow = () => {
                                 </div>
                             </div>
 
-                            {/* ステップ間 区切り - 逆三角形 (カードから独立して配置) */}
+                            {/* ステップ間 区切り - 逆三角形 (間に差し込む) */}
                             {index < flowSteps.length - 1 && (
-                                <div className="absolute left-1/2 -bottom-10 -translate-x-1/2 flex justify-center z-10">
-                                    <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                                        <path d="M0 0H40L20 12L0 0Z" fill="#7aaec8"/>
+                                <div className="flex justify-center py-2 relative z-10">
+                                    <svg width="32" height="10" viewBox="0 0 32 10" fill="none" className="drop-shadow-sm">
+                                        <path d="M0 0H32L16 10L0 0Z" fill="#7aaec8"/>
                                     </svg>
                                 </div>
                             )}

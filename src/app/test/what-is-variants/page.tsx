@@ -2,19 +2,19 @@
 
 import React from "react";
 
-// 共通の上部テキスト
-const TopSection = () => (
-  <div className="text-center text-white relative z-10">
-    <p className="text-[10px] md:text-xs tracking-[0.5em] text-white/70 uppercase mb-2">
-      WHAT IS LA BRILLER
-    </p>
-    <h2 className="text-3xl md:text-4xl font-light tracking-widest text-white mb-10">
-      ラブリエとは
-    </h2>
-    <div className="w-12 h-px bg-white/30 mx-auto mb-8" />
-    <p className="text-2xl md:text-3xl font-serif tracking-wider leading-[1.7] text-white mb-4">
-      貼るだけで<br />理想の口元を叶える
-    </p>
+// インバーテッド・ノッチ・リボン（共通）
+const Ribbon = () => (
+  <div className="flex justify-center relative z-10">
+    <div 
+        className="bg-[#B91C1C] px-8 md:px-12 py-2 md:py-3 relative inline-block"
+        style={{
+            clipPath: 'polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%, 12px 50%)',
+        }}
+    >
+        <h2 className="relative font-sans tracking-tight text-white text-xl md:text-2xl lg:text-3xl font-black drop-shadow-sm">
+            世界最薄ジルコニアベニア
+        </h2>
+    </div>
   </div>
 );
 
@@ -27,151 +27,168 @@ const BottomDesc = () => (
 );
 
 // ============================================================
-// 案1: Sharp Miter Corner（シャープな角落ち・マイター）
+// 案1: Vertical Stack (タイトな3行スタック)
+// 上下の余白を極限まで詰め、3行で1つのメッセージとして構築。
 // ============================================================
-const RedBandVariant1 = () => (
+const StackVariant1 = () => (
   <section className="relative bg-[#7AAEC8] py-16 px-6 overflow-hidden">
-    <div className="container mx-auto max-w-2xl text-center">
-      <TopSection />
-      <div className="flex justify-center my-2">
-        <div 
-          className="bg-[#B91C1C] px-6 py-2 relative inline-block"
-          style={{
-            clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)',
-          }}
-        >
-          <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight px-4 shadow-sm">
-            世界最薄ジルコニアベニア
-          </h3>
+    <div className="container mx-auto max-w-2xl text-center relative z-10">
+      <div className="flex flex-col items-center">
+        {/* 行1: ラブリエとは */}
+        <span className="text-[10px] md:text-xs tracking-[0.6em] text-white/70 uppercase mb-2">
+            WHAT IS LA BRILLER
+        </span>
+        <h2 className="text-2xl md:text-3xl font-light tracking-[0.2em] text-white mb-6">
+            ラブリエとは
+        </h2>
+        
+        {/* 行2-3: 貼るだけで〜（フォントサイズ調整） */}
+        <div className="space-y-1 mb-8">
+            <p className="text-xl md:text-2xl font-serif italic tracking-widest text-white/90">
+                貼るだけで
+            </p>
+            <p className="text-2xl md:text-3xl font-serif tracking-[0.15em] leading-tight text-white font-medium">
+                理想の口元を叶える
+            </p>
         </div>
       </div>
+      
+      <Ribbon />
       <BottomDesc />
     </div>
   </section>
 );
 
 // ============================================================
-// 案2: Double Mitered Ribbon（上下の角を落とした宝石風カット）
+// 案2: Line Connected (ラインで繋ぐ一体感)
+// 薄い縦線やドットを用いて、視線を3行に誘導し、間延びを「意図的な繋ぎ」に変える。
 // ============================================================
-const RedBandVariant2 = () => (
+const StackVariant2 = () => (
   <section className="relative bg-[#7AAEC8] py-16 px-6 overflow-hidden">
-    <div className="container mx-auto max-w-2xl text-center">
-      <TopSection />
-      <div className="flex justify-center my-2">
-        <div 
-          className="bg-[#B91C1C] px-8 py-2 relative inline-block border-x-2 border-white/20"
-          style={{
-            clipPath: 'polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px)',
-          }}
-        >
-          <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">
-            世界最薄ジルコニアベニア
-          </h3>
+    <div className="container mx-auto max-w-2xl text-center relative z-10">
+      <div className="flex flex-col items-center">
+        <h2 className="text-2xl md:text-3xl font-light tracking-[0.2em] text-white mb-2">
+            ラブリエとは
+        </h2>
+        {/* 繋ぎのライン */}
+        <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent mb-4" />
+        
+        <div className="mb-8">
+            <p className="text-lg md:text-xl font-serif italic tracking-[0.3em] text-white/80 mb-2">
+                貼るだけで
+            </p>
+            <p className="text-2xl md:text-3xl font-serif tracking-[0.1em] text-white leading-none">
+                理想の口元を叶える
+            </p>
         </div>
       </div>
+      
+      <Ribbon />
       <BottomDesc />
     </div>
   </section>
 );
 
 // ============================================================
-// 案3: Inverted Miter / Notched（内側に食い込むマイターカット）
+// 案3: Serif Focus Harmony (全行明朝による情緒的一体化)
+// すべてを明朝ベースの強弱で構成し、雑誌のキャッチコピーのようなリズムを作る。
 // ============================================================
-const RedBandVariant3 = () => (
+const StackVariant3 = () => (
   <section className="relative bg-[#7AAEC8] py-16 px-6 overflow-hidden">
-    <div className="container mx-auto max-w-2xl text-center">
-      <TopSection />
-      <div className="flex justify-center my-2">
-        <div 
-          className="bg-[#B91C1C] px-10 py-2 relative inline-block"
-          style={{
-            clipPath: 'polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%, 12px 50%)',
-          }}
-        >
-          <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">
-            世界最薄ジルコニアベニア
-          </h3>
-        </div>
-      </div>
-      <BottomDesc />
-    </div>
-  </section>
-);
-
-// ============================================================
-// 案4: Elegant Bevel Band（タイトな極細フレーム + マイター）
-// ============================================================
-const RedBandVariant4 = () => (
-  <section className="relative bg-[#7AAEC8] py-16 px-6 overflow-hidden">
-    <div className="container mx-auto max-w-2xl text-center">
-      <TopSection />
-      <div className="flex justify-center my-2">
-        <div className="relative group">
-          {/* 背後の装飾ライン */}
-          <div className="absolute -inset-1 bg-white/20 blur-[1px] opacity-50" style={{ clipPath: 'polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%)' }} />
-          {/* メインの帯 */}
-          <div 
-            className="bg-[#B91C1C] px-7 py-1.5 relative inline-block border-y border-white/10"
-            style={{
-              clipPath: 'polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%)',
-            }}
-          >
-            <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-tight">
-              世界最薄ジルコニアベニア
-            </h3>
+    <div className="container mx-auto max-w-2xl text-center relative z-10">
+      {/* 3行を密接に配置 */}
+      <div className="mb-10 text-white">
+          <p className="text-sm md:text-base font-serif italic tracking-[0.4em] opacity-70 mb-1">
+            What is La Briller
+          </p>
+          <h2 className="text-3xl md:text-4xl font-serif tracking-widest border-b border-white/20 pb-4 mb-6 inline-block">
+            ラブリエとは
+          </h2>
+          <div className="space-y-2">
+              <p className="text-2xl md:text-3xl font-serif tracking-widest leading-none">
+                貼るだけで
+              </p>
+              <p className="text-2xl md:text-3xl font-serif tracking-widest leading-none">
+                理想の口元を叶える
+              </p>
           </div>
-        </div>
       </div>
+      
+      <Ribbon />
       <BottomDesc />
     </div>
   </section>
 );
 
-export default function RedBandVariantsPage() {
+// ============================================================
+// 案4: Modern Minimal Stack (モダンな等間隔スタック)
+// 余白を均等、かつタイトに。横線を排除して文字の塊感（ブロック感）を強調。
+// ============================================================
+const StackVariant4 = () => (
+  <section className="relative bg-[#7AAEC8] py-16 px-6 overflow-hidden">
+    <div className="container mx-auto max-w-2xl text-center relative z-10">
+      {/* 行間を極限まで詰め、1つのブロックに見せる */}
+      <div className="flex flex-col gap-2 mb-10 items-center">
+          <span className="text-[10px] tracking-[0.8em] text-white/50 font-bold">ABOUT LA BRILLER</span>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-[0.25em] text-white">ラブリエとは</h2>
+          <div className="w-8 h-px bg-white/40 my-2" />
+          <p className="text-xl md:text-2xl font-serif tracking-[0.1em] text-white/90">貼るだけで</p>
+          <p className="text-2xl md:text-3xl font-serif tracking-[0.1em] text-white font-semibold">理想の口元を叶える</p>
+      </div>
+      
+      <Ribbon />
+      <BottomDesc />
+    </div>
+  </section>
+);
+
+export default function TextStackVariantsPage() {
   return (
-    <main className="min-h-screen bg-gray-100 pb-20">
-      <div className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200 px-6 py-4 text-center">
-        <h1 className="text-xl font-bold text-gray-800">Red Band 形状特化案（マイター・タイトフィット）</h1>
-        <p className="text-gray-500 text-sm mt-1">
-          「世界最薄ジルコニアベニア」をより引き立てる帯の形状バリエーション
-        </p>
+    <main className="min-h-screen bg-gray-50 pb-32">
+      <div className="p-8 bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm text-center">
+        <h1 className="text-2xl font-bold text-gray-800">3行スタック・配置比較案 × 4</h1>
+        <p className="text-gray-600 mt-2">「ラブリエとは」「貼るだけで」「理想の口元〜」の3要素の間隔を詰め、一体感を高める提案です。</p>
       </div>
 
-      <div className="space-y-16 mt-12">
-        <div>
-          <div className="px-6 pb-4 flex items-center justify-center gap-2">
-            <span className="bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-full">案3-A</span>
-            <span className="font-bold text-gray-800 italic">Sharp Slant Miter</span>
-            <span className="text-gray-500 text-sm">— 平行四辺形風のマイター。スピード感とモダンさ</span>
+      <div className="space-y-px mt-12">
+        {/* 案1 */}
+        <div className="bg-white py-12">
+          <div className="px-6 mb-4 flex items-center justify-center gap-2">
+            <span className="bg-[#B91C1C] text-white text-xs font-bold px-3 py-1 rounded-full uppercase italic">Variant 1</span>
+            <span className="font-bold text-gray-800">Tight Stack</span>
+            <span className="text-gray-500 text-sm">— 余白を極限まで削削ぎ落とし、3つの言葉を1つのメッセージに凝縮</span>
           </div>
-          <RedBandVariant1 />
+          <StackVariant1 />
         </div>
 
-        <div>
-          <div className="px-6 pb-4 flex items-center justify-center gap-2">
-            <span className="bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-full">案3-B</span>
-            <span className="font-bold text-gray-800 italic">Octagon Polish</span>
-            <span className="text-gray-500 text-sm">— 四隅を落とした八角形風。宝石やラベルのような「品」</span>
+        {/* 案2 */}
+        <div className="bg-white py-12">
+          <div className="px-6 mb-4 flex items-center justify-center gap-2">
+            <span className="bg-[#B91C1C] text-white text-xs font-bold px-3 py-1 rounded-full uppercase italic">Variant 2</span>
+            <span className="font-bold text-gray-800">Line Connected</span>
+            <span className="text-gray-500 text-sm">— 細い縦ラインで視線を誘導。間延びを「ストーリーの繋がり」に昇華</span>
           </div>
-          <RedBandVariant2 />
+          <StackVariant2 />
         </div>
 
-        <div>
-          <div className="px-6 pb-4 flex items-center justify-center gap-2">
-            <span className="bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-full">案3-C</span>
-            <span className="font-bold text-gray-800 italic">Inverted Notch</span>
-            <span className="text-gray-500 text-sm">— 両端が内側に食い込むリボン形状。古典的な「最高級」の記号</span>
+        {/* 案3 */}
+        <div className="bg-white py-12">
+          <div className="px-6 mb-4 flex items-center justify-center gap-2">
+            <span className="bg-[#B91C1C] text-white text-xs font-bold px-3 py-1 rounded-full uppercase italic">Variant 3</span>
+            <span className="font-bold text-gray-800">Serif Focus Harmony</span>
+            <span className="text-gray-500 text-sm">— 明朝体系で統一し、全体を優雅な「一つの詩」のように見せる</span>
           </div>
-          <RedBandVariant3 />
+          <StackVariant3 />
         </div>
 
-        <div>
-          <div className="px-6 pb-4 flex items-center justify-center gap-2">
-            <span className="bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-full">案3-D</span>
-            <span className="font-bold text-gray-800 italic">Minimal Tight Bevel</span>
-            <span className="text-gray-500 text-sm">— 最もタイトな幅 ＋ 絶妙なマイター。現代的なラグジュアリー</span>
+        {/* 案4 */}
+        <div className="bg-white py-12">
+          <div className="px-6 mb-4 flex items-center justify-center gap-2">
+            <span className="bg-[#B91C1C] text-white text-xs font-bold px-3 py-1 rounded-full uppercase italic">Variant 4</span>
+            <span className="font-bold text-gray-800">Modern Minimal Block</span>
+            <span className="text-gray-500 text-sm">— 装飾を削ぎ、文字のサイズ差とタイトな間隔だけで「塊感」を作る</span>
           </div>
-          <RedBandVariant4 />
+          <StackVariant4 />
         </div>
       </div>
     </main>

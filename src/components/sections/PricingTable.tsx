@@ -33,6 +33,11 @@ export const PricingTable = () => {
             </tbody>
           </table>
         </div>
+
+        {/* Disclaimer */}
+        <p className="mt-6 text-[10px] md:text-xs text-gray-400 text-center leading-relaxed">
+          ※セラミック治療は自由診療で、健康保険の適用外となります。
+        </p>
       </div>
     </section>
   );

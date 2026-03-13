@@ -9,7 +9,7 @@ import { QA } from "@/components/sections/QA";
 import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
 import { WhatIsLabriller } from "@/components/sections/WhatIsLabriller";
-import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { ComparisonTableNoScroll } from "@/components/sections/ComparisonTableNoScroll";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { PricingTable } from "@/components/sections/PricingTable";
 
@@ -24,7 +24,7 @@ export default function Home() {
 
       <Merits />
 
-      <ComparisonTable />
+      <ComparisonTableNoScroll />
 
       <CaseStudies />
 
