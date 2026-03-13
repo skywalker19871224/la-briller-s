@@ -1,5 +1,5 @@
 "use client";
-
+import { SectionHeader } from "@/components/ui/SectionHeader";
 const brandColumns = [
   {
     key: "labriller",
@@ -64,15 +64,14 @@ export const ComparisonTable = () => {
   return (
     <section className="section-py bg-white" id="comparison">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="text-center mx-auto max-w-3xl space-y-4">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-parfait-blue/80">Comparison</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-            ラブリエと他の審美治療の違い
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-            厚み・強度・処置内容など、治療法ごとの特徴を項目別に比較できます。
-          </p>
-        </div>
+        <SectionHeader
+          en="Comparison"
+          ja="ラブリエと他の審美治療の違い"
+          theme="light"
+          enColor="text-parfait-blue/80"
+          description="厚み・強度・処置内容など、治療法ごとの特徴を項目別に比較できます。"
+          className="mb-12 md:mb-16"
+        />
 
         <div className="mt-10">
           <div className="overflow-hidden rounded-3xl border border-parfait-blue/20 bg-white shadow-[0_20px_50px_rgba(10,25,45,0.08)]">

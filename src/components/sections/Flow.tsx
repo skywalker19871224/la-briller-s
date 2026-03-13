@@ -1,5 +1,5 @@
 "use client";
-
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useEffect, useRef, useState } from 'react';
 
 const steps = [
@@ -63,8 +63,12 @@ export const Flow = () => {
             {/* Title Band — QAと同パターン */}
             <div className="bg-parfait-blue py-10 text-center text-white">
                 <div className="container mx-auto px-6">
-                    <p className="text-[10px] tracking-[0.5em] uppercase text-white/60 mb-2">Treatment Flow</p>
-                    <h2 className="text-3xl md:text-4xl font-serif tracking-wider">治療の流れ</h2>
+                    <SectionHeader
+                        en="Treatment Flow"
+                        ja="治療の流れ"
+                        theme="dark"
+                        className="mb-0" // override the typical margin-bottom since it's already in a padded band
+                    />
                 </div>
             </div>
 

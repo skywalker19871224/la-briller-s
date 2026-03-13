@@ -1,4 +1,5 @@
 "use client";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -25,19 +26,12 @@ export const Merits = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-blue-50/40 to-white/95" />
 
             <div className="relative container mx-auto px-6">
-                {/* Section Header */}
-                <div className="text-center mb-8 md:mb-10">
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-4" />
-                    <p className="text-[10px] md:text-xs tracking-[0.4em] text-gold/80 uppercase mb-4">
-                        The 6 Advantages
-                    </p>
-                    <h2 className="text-[28px] md:text-4xl lg:text-5xl font-sans text-gray-800 leading-[1.4] tracking-wide font-bold">
-                        ラブリエの
-                        <br />
-                        特徴
-                    </h2>
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4" />
-                </div>
+                <SectionHeader
+                    en="The 6 Advantages"
+                    ja="ラブリエの特徴"
+                    theme="light"
+                    className="mb-16 md:mb-20"
+                />
 
                 {/* Bubble Cloud Layout */}
                 <div className="relative max-w-[500px] mx-auto min-h-[550px] md:min-h-[600px]">

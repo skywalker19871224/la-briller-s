@@ -1,5 +1,5 @@
 "use client";
-
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import React, { useEffect, useRef, useState } from "react";
 
 const LINES = [
@@ -14,10 +14,11 @@ export const WhatIsLabriller = () => {
     const [progress, setProgress] = useState(0);
 
     // --- 【手動調整用】フォントサイズの設定 ---
-    // ここを変更すると文字の大きさが変わります
-    // Tailwindのクラス名（text-xl等）で指定してください
     const fontSizeTop = "text-2xl md:text-3xl lg:text-4xl"; // 「貼るだけで〜」のサイズ
     const fontSizeBottom = "text-xl md:text-2xl lg:text-3xl"; // 「世界最薄〜」のサイズ
+    const fontWeightBottom = "font-black"; // 文字の太さ (font-thin, font-light, font-normal, font-medium, font-bold, font-extrabold, font-black)
+    const textColorBottom = "text-red-700"; // 文字の色 (text-red-600, text-rose-700, text-orange-600 など)
+    const textEffectBottom = "drop-shadow-md"; // 文字の影 (drop-shadow-sm, drop-shadow-md, drop-shadow-lg, shadow-none)
     const descriptionSize = "text-base md:text-lg"; // 説明文のサイズ
     // ---------------------------------------
 
@@ -63,12 +64,19 @@ export const WhatIsLabriller = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+                <SectionHeader
+                    en="What is La Briller"
+                    ja="ラブリエとは"
+                    theme="dark"
+                    className="mb-16 md:mb-24"
+                />
+
                 {/* Main Copies */}
                 <div className="mb-12 space-y-4">
                     <p className={`font-serif tracking-wider leading-[1.8] ${fontSizeTop}`}>
                         貼るだけで<br />理想の口元を叶える
                     </p>
-                    <h2 className={`font-serif font-bold tracking-tight text-white ${fontSizeBottom}`}>
+                    <h2 className={`font-sans tracking-tight ${textColorBottom} ${textEffectBottom} ${fontSizeBottom} ${fontWeightBottom}`}>
                         世界最薄ジルコニアベニア
                     </h2>
                 </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib/utils";
 
 const qaData = [
@@ -47,8 +48,12 @@ export const QA = () => {
             {/* Title Band: BrandMessageと対になる水色の帯 */}
             <div className="bg-parfait-blue py-10 text-center text-white">
                 <div className="container mx-auto px-6">
-                    <p className="text-[10px] tracking-[0.5em] uppercase text-white/60 mb-2">Support</p>
-                    <h2 className="text-3xl md:text-4xl font-serif tracking-wider">よくある質問</h2>
+                    <SectionHeader
+                        en="Support"
+                        ja="よくある質問"
+                        theme="dark"
+                        className="mb-0"
+                    />
                 </div>
             </div>
 
