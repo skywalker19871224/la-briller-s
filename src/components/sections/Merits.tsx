@@ -90,7 +90,7 @@ export const Merits = () => {
 // Internal Bubble Component
 // - 入場: IntersectionObserver で fade + scale in
 // - 揺れ: スクロール量 × 個別位相のサイン波で上下にゆらゆら
-const Bubble = ({ item, size, className, index }: { item: any; size: string; className?: string; index: number }) => {
+const Bubble = ({ item, size, className, index }: { item: { id: number; title: React.ReactNode }; size: string; className?: string; index: number }) => {
     const ref = useRef<HTMLDivElement>(null);
     const [visible, setVisible] = useState(false);
     const [wobble, setWobble] = useState(0);

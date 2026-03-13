@@ -83,7 +83,7 @@ export const Flow = () => {
                                 </div>
 
                                 {/* ステップ間 区切り - 潰れた逆三角形のデザイン（比率維持で拡大 + マージン詰め） */}
-                                {index < steps.length - 1 && (
+                                {index < flowSteps.length - 1 && (
                                     <div className="relative h-6 flex items-center">
                                         {/* 縦のガイドライン */}
                                         <div className="absolute h-full w-px bg-gray-200 left-[2.75rem] hidden sm:block" />
