@@ -68,22 +68,34 @@ export const WhatIsLabriller = () => {
                     en="What is La Briller"
                     ja="ラブリエとは"
                     theme="dark"
-                    className="mb-16 md:mb-24"
+                    className="mb-10 md:mb-14"
                 />
 
                 {/* Main Copies */}
-                <div className="mb-12 space-y-4">
-                    <p className={`font-serif tracking-wider leading-[1.8] ${fontSizeTop}`}>
-                        貼るだけで<br />理想の口元を叶える
+                <div className="mb-10 space-y-6 flex flex-col items-center">
+                    <p className={`font-serif tracking-wider leading-[1.6] ${fontSizeTop}`}>
+                        貼るだけで<br className="md:hidden" />
+                        理想の口元を叶える
                     </p>
-                    <h2 className={`font-sans tracking-tight ${textColorBottom} ${textEffectBottom} ${fontSizeBottom} ${fontWeightBottom}`}>
-                        世界最薄ジルコニアベニア
-                    </h2>
+                    
+                    {/* 案3-C: Inverted Notch Ribbon */}
+                    <div className="relative group">
+                        <div 
+                            className="bg-[#B91C1C] px-8 md:px-12 py-2 md:py-3 relative inline-block"
+                            style={{
+                                clipPath: 'polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%, 12px 50%)',
+                            }}
+                        >
+                            <h2 className={`relative font-sans tracking-tight text-white ${fontSizeBottom} ${fontWeightBottom} drop-shadow-sm`}>
+                                世界最薄ジルコニアベニア
+                            </h2>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Minimal Divider */}
-                <div className="flex justify-center mb-12">
-                    <div className="w-16 h-px bg-white/40 mx-auto" />
+                {/* Minimal Divider - Margin adjusted */}
+                <div className="flex justify-center mb-10">
+                    <div className="w-12 h-px bg-white/30 mx-auto" />
                 </div>
 
                 {/* Detailed Description */}
