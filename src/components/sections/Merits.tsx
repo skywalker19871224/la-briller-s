@@ -26,36 +26,36 @@ export const Merits = () => {
                     className="mb-16 md:mb-20"
                 />
 
-                {/* Bubble Cloud Layout */}
-                <div className="relative max-w-[500px] mx-auto min-h-[550px] md:min-h-[600px]">
-                    {/* Row 1: Left & Right */}
-                    <div className="flex justify-between px-2 md:px-0">
-                        <Bubble item={merits[0]} size="w-36 h-36 md:w-44 md:h-44" className="z-10 bg-cyan-50/70" index={0} />
-                        <Bubble item={merits[1]} size="w-36 h-36 md:w-44 md:h-44" className="z-10 mt-8 bg-cyan-50/70" index={1} />
+                {/* Bubble Cloud Layout - Refined for balance */}
+                <div className="relative max-w-[600px] mx-auto min-h-[600px] flex flex-col items-center">
+                    {/* Top Row: 2 Bubbles */}
+                    <div className="w-full flex justify-around mb-[-1.5rem] md:mb-[-2rem]">
+                        <Bubble item={merits[0]} size="w-36 h-36 md:w-44 md:h-44" className="z-10" index={0} />
+                        <Bubble item={merits[1]} size="w-36 h-36 md:w-44 md:h-44" className="z-10 lg:translate-y-4" index={1} />
                     </div>
 
-                    {/* Row 2: Center */}
-                    <div className="flex justify-center -mt-10">
-                        <Bubble item={merits[2]} size="w-36 h-36 md:w-44 md:h-44" className="z-20 shadow-xl bg-cyan-50/80" index={2} />
+                    {/* Middle Row: 1 Main Bubble */}
+                    <div className="z-20 mb-[-1.5rem] md:mb-[-2rem]">
+                        <Bubble item={merits[2]} size="w-40 h-40 md:w-48 md:h-48" className="shadow-2xl" index={2} />
                     </div>
 
-                    {/* Row 3: Left & Right */}
-                    <div className="flex justify-between px-2 md:px-0 -mt-10">
-                        <Bubble item={merits[3]} size="w-36 h-36 md:w-44 md:h-44" className="z-10 bg-cyan-50/70" index={3} />
-                        <Bubble item={merits[4]} size="w-36 h-36 md:w-44 md:h-44" className="z-10 mt-8 bg-cyan-50/70" index={4} />
+                    {/* Row 3: 2 Bubbles */}
+                    <div className="w-full flex justify-between px-4 md:px-0 mb-[-1.5rem] md:mb-[-2rem]">
+                        <Bubble item={merits[3]} size="w-36 h-36 md:w-44 md:h-44" className="z-10" index={3} />
+                        <Bubble item={merits[4]} size="w-36 h-36 md:w-44 md:h-44" className="z-10 translate-y-2" index={4} />
                     </div>
 
-                    {/* Row 4: Center */}
-                    <div className="flex justify-center -mt-10">
-                        <Bubble item={merits[5]} size="w-36 h-36 md:w-44 md:h-44" className="z-20 bg-cyan-50/80" index={5} />
+                    {/* Bottom Row: 1 Bubble */}
+                    <div className="z-20">
+                        <Bubble item={merits[5]} size="w-36 h-36 md:w-44 md:h-44" index={5} />
                     </div>
 
-                    {/* Sparkle Decorations */}
-                    <div className="absolute top-1/4 -left-4 md:-left-10 text-parfait-blue/40 animate-pulse">
-                        <Sparkles className="w-10 h-10" />
+                    {/* Sparkle Decorations - Repositioned for balance */}
+                    <div className="absolute top-1/4 left-0 md:-left-8 text-parfait-blue/30 animate-pulse pointer-events-none">
+                        <Sparkles className="w-8 h-8 md:w-10 md:h-10" />
                     </div>
-                    <div className="absolute bottom-1/3 -right-4 md:-right-10 text-parfait-blue/40 animate-pulse" style={{ animationDelay: '1.5s' }}>
-                        <Sparkles className="w-8 h-8 rotate-12" />
+                    <div className="absolute bottom-1/4 right-0 md:-right-8 text-parfait-blue/30 animate-pulse pointer-events-none" style={{ animationDelay: '1.5s' }}>
+                        <Sparkles className="w-8 h-8 md:w-10 md:h-10 rotate-12" />
                     </div>
                 </div>
 
@@ -137,23 +137,34 @@ const Bubble = ({ item, size, className, index }: { item: { id: number; title: R
                     transitionDelay: `${index * 80}ms`,
                     opacity: visible ? 1 : 0,
                     transform: visible ? 'scale(1)' : 'translateY(20px) scale(0.95)',
-                    transition: 'opacity 0.65s ease, transform 0.65s ease',
+                    transition: 'opacity 0.7s ease-out, transform 0.7s ease-out',
+                    background: 'radial-gradient(110% 110% at 20% 10%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.1) 100%)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(255, 255, 255, 0.5)',
+                    boxShadow: `
+                        0 25px 50px -12px rgba(0, 0, 0, 0.1),
+                        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+                        inset 0 -1px 4px rgba(0, 0, 0, 0.05)
+                    `,
                 }}
                 className={`
                     ${size} ${className}
                     relative flex flex-col items-center justify-center rounded-full
-                    border border-white/60 shadow-[0_12px_40px_rgba(180,225,255,0.25)]
-                    backdrop-blur-[3px] p-4 text-center
+                    p-4 text-center group
                     pointer-events-none select-none
                 `}
             >
+                {/* Visual Glass Shine / Reflection */}
+                <div className="absolute top-0 right-0 left-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-full pointer-events-none" />
+                
                 <span
-                    className="absolute top-6 left-1/2 -translate-x-1/2 text-[18px] md:text-[20px] text-[#FF6EB4]/90"
+                    className="absolute top-6 left-1/2 -translate-x-1/2 text-[18px] md:text-[20px] text-parfait-blue/90"
                     style={{ fontFamily: "'Brush Script MT', cursive", fontStyle: 'italic' }}
                 >
                     Merit {item.id}
                 </span>
-                <p className="text-[15px] md:text-[18px] font-bold text-labriller-blue leading-tight mt-6">
+                <p className="text-[15px] md:text-[18px] font-bold text-gray-800 leading-tight mt-6 relative z-10">
                     {item.title}
                 </p>
             </div>

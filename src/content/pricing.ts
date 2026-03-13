@@ -4,5 +4,5 @@ export type PriceRow = {
 };
 
 export const pricingRows: PriceRow[] = [
-  { label: "ラミネートベニア", price: "¥66,000（税込）" },
+  { label: "ラブリエ（La Briller）", price: "¥98,000（税込 ¥107,800）" },
 ];

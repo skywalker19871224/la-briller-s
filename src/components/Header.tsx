@@ -57,7 +57,6 @@ export const Header = () => {
               alt="表参道の歯医者｜パルフェクリニック・医科歯科"
               className="h-12 w-auto"
             />
-            <span className="text-[8px] font-mono text-gray-300 mt-2">v3.1</span>
           </div>
 
           {/* Global Navigation (Desktop) */}

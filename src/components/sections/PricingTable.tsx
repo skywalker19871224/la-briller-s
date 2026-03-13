@@ -23,17 +23,35 @@ export const PricingTable = () => {
               </tr>
             </thead>
             <tbody>
-              {pricingRows.map((row) => (
-                <tr key={row.label} className="border-t border-parfait-blue/10">
-                  <td className="px-3 md:px-6 py-6 md:py-6 text-center text-base md:text-lg font-bold text-gray-800 leading-tight">
-                    {row.label}
-                  </td>
-                  <td className="px-3 md:px-6 py-6 md:py-6 text-center text-base md:text-lg font-bold text-gray-800 border-l border-parfait-blue/10 whitespace-nowrap">
-                    <span className="text-xs md:text-sm font-normal mr-0.5">¥</span>
-                    {row.price.replace('¥', '')}
-                  </td>
-                </tr>
-              ))}
+              {pricingRows.map((row) => {
+                // 価格文字列をパースして、税込表示などを分離する
+                const priceMatch = row.price.match(/^(¥?[\d,]+)(.*)$/);
+                const mainPrice = priceMatch ? priceMatch[1].replace('¥', '') : row.price;
+                const subPrice = priceMatch ? priceMatch[2] : "";
+
+                return (
+                  <tr key={row.label} className="border-t border-parfait-blue/10 group hover:bg-parfait-blue/[0.02] transition-colors">
+                    <td className="px-3 md:px-6 py-5 md:py-6 text-center">
+                      <div className="text-sm md:text-base font-bold text-gray-800 leading-tight">
+                        {row.label}
+                      </div>
+                    </td>
+                    <td className="px-3 md:px-6 py-5 md:py-6 text-center border-l border-parfait-blue/10">
+                      <div className="inline-flex flex-col items-center">
+                        <div className="text-base md:text-lg font-black text-gray-900 tracking-tight">
+                          <span className="text-[10px] md:text-xs font-medium mr-0.5">¥</span>
+                          {mainPrice}
+                        </div>
+                        {subPrice && (
+                          <div className="text-[9px] md:text-[10px] text-gray-500 font-medium mt-0.5 opacity-80">
+                            {subPrice}
+                          </div>
+                        )}
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
