@@ -152,4 +152,30 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* --- 余白調整用ユーティリティクラス（ユーザー手動適用用） --- */
+
+  /* セクション上下の標準パディング (スマホ小さめ、PC大きめ) */
+  .section-py {
+    @apply py-12 md:py-20;
+  }
+
+  /* セクション上部のマージン */
+  .section-mt {
+    @apply mt-12 md:mt-20;
+  }
+
+  /* セクション下部のマージン（今回のようにIGセクションの下を詰めたい時などに調整しやすいクラス） */
+  .section-mb {
+    @apply mb-12 md:mb-20;
+  }
+
+  /* より詰まった余白（スタイリッシュに見せたい箇所用） */
+  .section-py-sm {
+    @apply py-8 md:py-12;
+  }
+
+  .section-mb-sm {
+    @apply mb-8 md:mb-12;
+  }
 }

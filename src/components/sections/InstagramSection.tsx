@@ -51,8 +51,6 @@ export const InstagramSection = () => {
                         <div className="text-[11px] md:text-sm leading-snug">
                             <p className="font-semibold text-gray-800 hidden md:block">パルフェクリニック × La Briller</p>
                             <div className="text-gray-600">
-                                <span>🏛 セレブリティ審美歯科</span>
-                                <span className="mx-1 opacity-50">|</span>
                                 <span>💎 世界初 0.04mmジルコニア</span>
                             </div>
                             <p className="text-parfait-blue font-medium mt-0.5">#ParfaitClinic #LaBriller</p>

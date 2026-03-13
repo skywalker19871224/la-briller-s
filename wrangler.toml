@@ -1,4 +1,4 @@
-name = "la-briller"
+name = "la-briller-s"
 pages_build_output_dir = "out"
 
 # ========================================
@@ -10,7 +10,7 @@ pages_build_output_dir = "out"
 # account_id = "1e645d153a173af4db10240f6adf81cd"
 
 # 🐙 Git (バージョン管理先)
-# Repository: https://github.com/skywalker19871224/la-briller
+# Repository: https://github.com/skywalker19871224/la-briller-s
 # Local Git Config:
 #   git config --local user.name "skywalker19871224"
 #   git config --local user.email "skywalker19871224@gmail.com"

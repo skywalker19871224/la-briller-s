@@ -32,9 +32,9 @@ export const Merits = () => {
                         The 6 Advantages
                     </p>
                     <h2 className="text-[28px] md:text-4xl lg:text-5xl font-sans text-gray-800 leading-[1.4] tracking-wide font-bold">
-                        ジルコニアベニアの
+                        ラブリエの
                         <br />
-                        メリット
+                        特徴
                     </h2>
                     <div className="w-12 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4" />
                 </div>

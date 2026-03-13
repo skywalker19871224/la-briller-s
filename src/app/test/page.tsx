@@ -154,9 +154,31 @@ export default function TestIndex() {
         }
     }, []);
 
+    const [syncing, setSyncing] = useState(false);
+
+    // デバイスのディスク（ファイル）に同期
+    const syncToDisk = async (data: typeof sections) => {
+        setSyncing(true);
+        try {
+            await fetch('/api/sync-config', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    updatedAt: new Date().toISOString(),
+                    sections: data
+                }),
+            });
+        } catch (e) {
+            console.error("Sync to disk failed", e);
+        } finally {
+            setTimeout(() => setSyncing(false), 800);
+        }
+    };
+
     const saveToLocal = (newSections: typeof sections) => {
         setSections(newSections);
         localStorage.setItem("labriller-sections-v3", JSON.stringify(newSections));
+        syncToDisk(newSections); // ファイルにも保存
     };
 
     const handleRename = (id: string, newName: string) => {
@@ -173,6 +195,7 @@ export default function TestIndex() {
           const newIndex = items.findIndex(i => i.id === over.id);
           const newOrder = arrayMove(items, oldIndex, newIndex);
           localStorage.setItem("labriller-sections-v3", JSON.stringify(newOrder));
+          syncToDisk(newOrder); // ドラッグ終了時にファイルへ保存
           return newOrder;
         });
       }
@@ -201,11 +224,14 @@ export default function TestIndex() {
             <div className="max-w-3xl mx-auto">
                 <header className="mb-8 flex items-end justify-between border-b border-slate-100 pb-6">
                     <div>
-                        <div className="flex items-center gap-2 mb-1">
+                        <div className="flex items-center gap-3 mb-2">
                              <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
                                 <span className="text-white text-[10px] font-black italic">L</span>
                              </div>
                              <h1 className="text-xl font-black italic tracking-tight">Configuration Builder</h1>
+                             {syncing && (
+                                <span className="bg-green-500 w-2 h-2 rounded-full animate-ping ml-2" />
+                             )}
                         </div>
                         <p className="text-slate-400 text-[9px] font-bold uppercase tracking-[0.2em]">Drag to reorder / Click to rename</p>
                     </div>
