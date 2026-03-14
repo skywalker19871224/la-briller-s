@@ -15,7 +15,7 @@ export const WhatIsLabriller = () => {
 
     // --- 【手動調整用】フォントサイズの設定 ---
     const fontSizeTop = "text-2xl md:text-3xl lg:text-4xl"; // 「貼るだけで〜」のサイズ
-    const fontSizeBottom = "text-xl md:text-2xl lg:text-3xl"; // 「世界最薄〜」のサイズ
+    const fontSizeBottom = "text-base md:text-xl lg:text-2xl"; // 「世界最薄〜」のサイズ
     const fontWeightBottom = "font-black"; // 文字の太さ (font-thin, font-light, font-normal, font-medium, font-bold, font-extrabold, font-black)
     const textColorBottom = "text-red-700"; // 文字の色 (text-red-600, text-rose-700, text-orange-600 など)
     const textEffectBottom = "drop-shadow-md"; // 文字の影 (drop-shadow-sm, drop-shadow-md, drop-shadow-lg, shadow-none)
@@ -80,7 +80,7 @@ export const WhatIsLabriller = () => {
 
             <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
                 {/* Tight Stack Header */}
-                <div className="flex flex-col items-center mb-8">
+                <div className="flex flex-col items-center mb-1">
                     <span className="text-[10px] md:text-xs tracking-[0.6em] text-white/70 uppercase mb-2">
                         WHAT IS LA BRILLER
                     </span>
@@ -88,21 +88,21 @@ export const WhatIsLabriller = () => {
                         ラブリエとは
                     </h2>
                     
-                    <div className="space-y-1 mb-8">
-                        <p className="text-xl md:text-2xl font-serif italic tracking-widest text-white/90">
+                    <div className="space-y-1 mb-1">
+                        <p className="text-[28px] md:text-[35px] font-serif tracking-[0.15em] leading-tight text-white font-medium">
                             貼るだけで
                         </p>
-                        <p className="text-2xl md:text-3xl font-serif tracking-[0.15em] leading-tight text-white font-medium">
+                        <p className="text-[28px] md:text-[35px] font-serif tracking-[0.15em] leading-tight text-white font-medium">
                             理想の口元を叶える
                         </p>
                     </div>
                 </div>
 
                 {/* Inverted Notch Ribbon */}
-                <div className="flex justify-center mb-10">
+                <div className="flex justify-center mt-1 mb-4">
                     <div className="relative group">
                         <div 
-                            className="bg-[#B91C1C] px-8 md:px-12 py-2 md:py-3 relative inline-block"
+                            className="bg-[#B91C1C] px-6 md:px-10 py-1.5 md:py-2 relative inline-block"
                             style={{
                                 clipPath: 'polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%, 12px 50%)',
                             }}
@@ -115,7 +115,7 @@ export const WhatIsLabriller = () => {
                 </div>
 
                 {/* Minimal Divider */}
-                <div className="flex justify-center mb-10">
+                <div className="flex justify-center mb-4">
                     <div className="w-12 h-px bg-white/30 mx-auto" />
                 </div>
 

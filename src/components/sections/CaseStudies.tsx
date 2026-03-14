@@ -29,9 +29,9 @@ const CaseCard = ({ item }: { item: CaseItem }) => {
               style={{ objectPosition: item.positionBefore ?? "center" }}
             />
           </div>
-          {/* before ラベル - 左端へ移動 */}
-          <div className="absolute top-3 left-0 flex items-center gap-1.5 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-r-full">
-            <span className="text-white text-[10px] font-bold tracking-widest uppercase">before</span>
+          {/* before ラベル - よりコンパクトなデザインに */}
+          <div className="absolute top-2 left-2 flex items-center bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/10">
+            <span className="text-white text-[8px] md:text-[9px] font-bold tracking-[0.15em] uppercase">before</span>
           </div>
         </div>
 
@@ -49,10 +49,10 @@ const CaseCard = ({ item }: { item: CaseItem }) => {
               style={{ objectPosition: item.positionAfter ?? "center" }}
             />
           </div>
-          {/* after ラベル — サイトカラー水色 */}
-          <div className="absolute top-3 left-0 flex items-center gap-1.5 bg-[#3BADB0] px-2.5 py-1 rounded-r-full">
-            <span className="text-white text-[10px] font-bold tracking-widest uppercase">after</span>
-            <span className="text-white/80 text-[9px]">✦</span>
+          {/* after ラベル — コンパクトな浮遊デザイン */}
+          <div className="absolute top-2 left-2 flex items-center gap-1 bg-[#3BADB0]/80 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/10 shadow-sm">
+            <span className="text-white text-[8px] md:text-[9px] font-bold tracking-[0.15em] uppercase">after</span>
+            <span className="text-white/90 text-[8px] md:text-[9px]">✦</span>
           </div>
         </div>
       </div>

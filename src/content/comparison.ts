@@ -9,14 +9,14 @@ export const brandColumns = [
   {
     key: "super",
     label: "スーパーエナメル",
-    headerClass: "bg-[#9FD4D5] text-[#1A2530]",
+    headerClass: "bg-gray-100 text-gray-500",
     tagline: "高強度・審美",
     cellClass: "bg-white text-gray-900",
   },
   {
     key: "conventional",
     label: "従来のラミネートベニア",
-    headerClass: "bg-[#9FD4D5] text-[#1A2530]",
+    headerClass: "bg-gray-100 text-gray-500",
     tagline: "削る・重厚",
     cellClass: "bg-white text-gray-900",
   },
@@ -36,6 +36,12 @@ export const featureRows: FeatureRow[] = [
     conventional: "約0.5〜0.8mm",
   },
   {
+    label: "見た目",
+    labriller: "究極の自然（0.04mm）",
+    super: "自然（やや厚みあり）",
+    conventional: "人工的な厚み",
+  },
+  {
     label: "強度",
     labriller: "強い（〜1000MPa）人の歯",
     super: "強い（約360〜600MPa）",
@@ -52,6 +58,12 @@ export const featureRows: FeatureRow[] = [
     labriller: "約2回",
     super: "2〜3回",
     conventional: "2〜3回",
+  },
+  {
+    label: "麻酔",
+    labriller: "完全不要",
+    super: "ほぼ不要",
+    conventional: "必要",
   },
   {
     label: "元の歯への復元",

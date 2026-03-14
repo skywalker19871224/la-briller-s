@@ -11,12 +11,9 @@ export const Merits = () => {
             style={{
                 backgroundImage: "url('/assets/textures/texture_bg.jpg')",
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "right center",
             }}
         >
-            {/* Soft gradient overlay — 上部を薄くしてテクスチャを透かす */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-blue-50/40 to-white/95" />
-
             <div className="relative container mx-auto px-6">
                 <SectionHeader
                     en="Features of La Briller"

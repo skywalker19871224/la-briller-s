@@ -57,7 +57,12 @@ export const Flow = () => {
                                     </div>
                                     
                                     {/* Main Card - Solid Blue Frame */}
-                                    <div className="bg-white border border-parfait-blue rounded-xl rounded-tl-none p-4 md:p-6 shadow-[0_2px_12px_-8px_rgba(0,0,0,0.03)]">
+                                    <div 
+                                        className="border border-parfait-blue rounded-xl rounded-tl-none p-4 md:p-6 shadow-[0_2px_12px_-8px_rgba(0,0,0,0.03)]"
+                                        style={{
+                                            background: 'radial-gradient(circle at 30% 30%, #F2F7F9 0%, #E6F0F5 100%)'
+                                        }}
+                                    >
                                         <div className="flex flex-wrap items-center gap-2 mb-1.5">
                                             <h3 className="text-sm md:text-lg font-bold text-labriller-blue leading-snug">
                                                 {step.title}
