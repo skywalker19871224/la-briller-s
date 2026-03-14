@@ -7,8 +7,8 @@ import { MoveLeft, MoveRight } from "lucide-react";
 const sampleItem = {
   category: "歯の隙間",
   title: "すきっ歯・ブラックトライアングルの改善",
-  imageBefore: "/images/cases/case1-before.jpg",
-  imageAfter: "/images/cases/case1-after.jpg",
+  imageBefore: "/images/cases/case1-before.webp",
+  imageAfter: "/images/cases/case1-after.webp",
 };
 
 export default function CaseDesignV2Page() {

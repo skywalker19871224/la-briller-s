@@ -9,7 +9,7 @@ export const Merits = () => {
         <section
             className="relative py-10 md:py-16 overflow-hidden bg-white"
             style={{
-                backgroundImage: "url('/assets/textures/texture_bg.jpg')",
+                backgroundImage: "url('/assets/textures/texture_bg.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "right center",
             }}

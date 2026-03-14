@@ -43,7 +43,7 @@ export const featureRows: FeatureRow[] = [
   },
   {
     label: "強度",
-    labriller: "強い（〜1000MPa）人の歯",
+    labriller: "〜1000MPa (人の歯の4倍の強度)",
     super: "強い（約360〜600MPa）",
     conventional: "やや弱い（約100〜160MPa）",
   },
@@ -58,12 +58,6 @@ export const featureRows: FeatureRow[] = [
     labriller: "約2回",
     super: "2〜3回",
     conventional: "2〜3回",
-  },
-  {
-    label: "麻酔",
-    labriller: "完全不要",
-    super: "ほぼ不要",
-    conventional: "必要",
   },
   {
     label: "元の歯への復元",

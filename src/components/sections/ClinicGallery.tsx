@@ -14,11 +14,11 @@ export const ClinicGallery = () => {
                 setTimeout(() => {
                     if (galleryRef.current) {
                         galleryRef.current.images = [
-                            { src: "/assets/images/clinic/受付.png", alt: "受付" },
-                            { src: "/assets/images/clinic/待合スペース.png", alt: "待合スペース" },
-                            { src: "/assets/images/clinic/診療室.png", alt: "診療室" },
-                            { src: "/assets/images/clinic/医科診察室.png", alt: "医科診察室" },
-                            { src: "/assets/images/clinic/スロープ.png", alt: "スロープ" }
+                            { src: "/assets/images/clinic/reception.webp", alt: "受付" },
+                            { src: "/assets/images/clinic/waiting-area.webp", alt: "待合スペース" },
+                            { src: "/assets/images/clinic/treatment-room.webp", alt: "診療室" },
+                            { src: "/assets/images/clinic/medical-room.webp", alt: "医科診察室" },
+                            { src: "/assets/images/clinic/slope.webp", alt: "スロープ" }
                         ];
                     }
                 }, 100);

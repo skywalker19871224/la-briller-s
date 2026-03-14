@@ -8,7 +8,7 @@ export const Access = () => {
                 {/* Logo */}
                 <div className="flex justify-center mb-10">
                     <img
-                        src="/assets/images/prfaitclinic_logo_yoko2-2.png"
+                        src="/assets/images/prfaitclinic_logo_yoko2-2.webp"
                         alt="Parfait Clinic Logo"
                         className="h-20 md:h-32 object-contain"
                     />

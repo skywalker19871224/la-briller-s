@@ -20,7 +20,7 @@ const qaData = [
     },
     {
         question: "ラブリエはどれくらいの強度がありますか？",
-        answer: "ラブリエはジルコニア素材を使用しており、約900〜1200MPaの強度があります。一般的なセラミックベニアよりも高い強度を持つ素材です。"
+        answer: "(〜1000MPa）人の歯の約4倍の強度。人工ダイヤモンドに匹敵するジルコニアセラミックを採用しているため、強度と耐久性に優れています。"
     },
     {
         question: "どのくらい持ちますか？",
@@ -73,7 +73,7 @@ export const QA = () => {
                                 )}
                             >
                                 <div className="flex gap-4">
-                                    <span className="text-gold font-serif italic text-xl shrink-0">A.</span>
+                                    <span className="text-rose-800 font-serif italic text-xl shrink-0">A.</span>
                                     <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">
                                         {item.answer}
                                     </p>

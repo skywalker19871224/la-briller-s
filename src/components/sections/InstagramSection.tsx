@@ -7,10 +7,10 @@ import Link from 'next/link';
 const igPosts = [
     { id: 1, type: 'video', src: '/assets/ig/videos/资源 14.mp4', likes: '1.2k', comments: '24' },
     { id: 2, type: 'video', src: '/assets/ig/videos/资源 37.mp4', likes: '850', comments: '12' },
-    { id: 3, type: 'image', src: '/assets/ig/before-after/482091311_17872006899297029_3312920532738003641_n.jpg', likes: '2.1k', comments: '45' },
-    { id: 4, type: 'image', src: '/assets/ig/before-after/486289258_122112843590798027_6362505743208880877_n.jpg', likes: '1.5k', comments: '30' },
+    { id: 3, type: 'image', src: '/assets/ig/before-after/482091311_17872006899297029_3312920532738003641_n.webp', likes: '2.1k', comments: '45' },
+    { id: 4, type: 'image', src: '/assets/ig/before-after/486289258_122112843590798027_6362505743208880877_n.webp', likes: '1.5k', comments: '30' },
     { id: 5, type: 'video', src: '/assets/ig/videos/资源 47.mp4', likes: '920', comments: '18' },
-    { id: 6, type: 'image', src: '/assets/ig/before-after/625833991_18101801386890286_4511904740009442304_n.jpg', likes: '3.4k', comments: '62' },
+    { id: 6, type: 'image', src: '/assets/ig/before-after/625833991_18101801386890286_4511904740009442304_n.webp', likes: '3.4k', comments: '62' },
 ];
 
 export const InstagramSection = () => {

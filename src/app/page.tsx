@@ -72,9 +72,9 @@ export default function Home() {
 
         <QA />
 
-        <ClinicGallery />
-
         <InstagramSection />
+
+        <ClinicGallery />
 
         <Access />
 

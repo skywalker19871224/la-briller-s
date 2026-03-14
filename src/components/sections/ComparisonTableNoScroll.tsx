@@ -50,9 +50,9 @@ export const ComparisonTableNoScroll = () => {
                     {row.label}
                   </td>
                   {brandColumns.map((brand, idx) => {
-                    // 1: 厚み, 2: 見た目, 3: 強度, 4: 歯を削る量, 5: 治療回数, 6: 麻酔, 7: 元の歯への復元
-                    // インデックスは0開始なので、0, 1, 2, 6番目に表示する
-                    const isTargetRow = [0, 1, 2, 6].includes(featureRows.indexOf(row));
+                    // 1: 厚み, 2: 見た目, 3: 強度, 4: 歯を削る量 (index 3), 5: 治療回数, 6: 元の歯への復元
+                    // インデックスは0開始なので、0, 1, 2, 5番目に表示する
+                    const isTargetRow = [0, 1, 2, 5].includes(featureRows.indexOf(row));
                     
                     return (
                       <td
@@ -83,7 +83,6 @@ export const ComparisonTableNoScroll = () => {
             <span className="inline-block font-bold bg-[linear-gradient(transparent_60%,#FFD1D1_60%)] pb-0.5">0.04mmという極薄</span>だからこそ、
             <span className="inline-block font-bold bg-[linear-gradient(transparent_60%,#FFD1D1_60%)] pb-0.5">歯を削らず、麻酔も使わず</span>、それでいて
             <span className="inline-block font-bold bg-[linear-gradient(transparent_60%,#FFD1D1_60%)] pb-0.5">ダイヤモンド級の強度</span>を実現できるのです。
-            スーパーエナメルと比較しても、<span className="inline-block font-bold bg-[linear-gradient(transparent_60%,#FFD1D1_60%)] pb-0.5">その差は歴然。</span>
             表参道のパルフェクリニックが、<span className="inline-block">自信を持ってこの一台を選んだ理由が</span>ここにあります。
           </p>
         </div>

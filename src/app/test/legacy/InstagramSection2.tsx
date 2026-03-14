@@ -14,7 +14,7 @@ type IGPost = {
 const posts: IGPost[] = [
   {
     id: "1",
-    imageUrl: "/assets/ig/post1.png",
+    imageUrl: "/assets/ig/post1.webp",
     caption:
       "0.04mmが変える、笑顔の概念。花びらより薄いジルコニアベニアが、歯を削らずに理想の白さを実現します。 #LaBriller #ジルコニアベニア",
     likes: 1248,
@@ -22,7 +22,7 @@ const posts: IGPost[] = [
   },
   {
     id: "2",
-    imageUrl: "/assets/ig/post2.png",
+    imageUrl: "/assets/ig/post2.webp",
     caption:
       "BEFORE → AFTER。スキャンから貼付まで、わずか2回の通院で完成するプレミアムスマイル。 #審美歯科 #パルフェクリニック",
     likes: 850,
@@ -30,7 +30,7 @@ const posts: IGPost[] = [
   },
   {
     id: "3",
-    imageUrl: "/assets/ig/post3.png",
+    imageUrl: "/assets/ig/post3.webp",
     caption:
       "表参道の空。Aoビル3Fに広がる、プライベートクリニックの穏やかな時間。 #表参道 #完全個室",
     likes: 2104,
@@ -38,7 +38,7 @@ const posts: IGPost[] = [
   },
   {
     id: "4",
-    imageUrl: "/assets/ig/post4.png",
+    imageUrl: "/assets/ig/post4.webp",
     caption:
       "ジルコニアが持つ、真珠のような透過性。色選択可能なので、あなただけの白さを選べます。 #ジルコニア #オーダーメイド",
     likes: 1502,
@@ -46,7 +46,7 @@ const posts: IGPost[] = [
   },
   {
     id: "5",
-    imageUrl: "/assets/ig/post5.png",
+    imageUrl: "/assets/ig/post5.webp",
     caption:
       "STEP 01 スキャン / STEP 02 貼付。たった2回の通院でセレブリティの笑顔へ。 #通院2回 #短期間",
     likes: 920,
@@ -54,7 +54,7 @@ const posts: IGPost[] = [
   },
   {
     id: "6",
-    imageUrl: "/assets/ig/post6.png",
+    imageUrl: "/assets/ig/post6.webp",
     caption:
       "美しさに対して、妥協しない。パルフェクリニック総院長が、La Brillerをパートナーに選んだ理由。 #総院長 #信頼",
     likes: 3401,

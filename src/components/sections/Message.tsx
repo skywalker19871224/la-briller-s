@@ -8,7 +8,7 @@ export const Message = () => {
                     <CardContent className="p-0 flex flex-col md:flex-row items-center gap-16">
                         <div className="w-full md:w-1/2 aspect-square bg-slate-200">
                             <div className="w-full h-full flex items-center justify-center text-slate-400">
-                                [ doctor_image.jpg ]
+                                [ doctor_image.webp ]
                             </div>
                         </div>
                         <div className="w-full md:w-1/2">
